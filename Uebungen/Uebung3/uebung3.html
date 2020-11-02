@@ -3,14 +3,32 @@
 <head>
 
     <meta charset="UTF-8">
+
     <link href="../bootstrap.css" rel="stylesheet">
     <div class="jumbotron">
         <title>Teilnehmerinnen</title>
 
         <style>
 
+    * {
+    --htw-gruen: #76B900;
+    --htw-grau:#AFAFAF;
+    --htw-orange:#FF5F00;
+    --htw-blau:#0082D1;
+    --htw-font:Verdana, Geneva, sans-serif;
+}
+        div, nav, body{
+            margin: 2px;
+            padding-right: 2px;
+            padding-left: 2px;
+
+        }
+
+
+
     .ueberschrift {
         padding-left:20%;
+
     }
     .logo {
         padding-left:40%;
@@ -18,7 +36,40 @@
 
     .nav-link{
     background-color:lightgrey;
-    color: #FF5F00;
+    color: var(--htw-orange);
+    mouseover:var(--htw-blau);
+    }
+
+
+    .row:after {
+    clear: both;
+    }
+
+    .tabelle tbody tr:hover{
+    background-color:var(--htw-gruen);
+    }
+
+    @media screen and (max-width: 991px){
+        .links{
+            background-color:var(--htw-orange);
+            height: 100px;
+            }
+
+        .rechts{
+            background-color:var(--htw-orange);
+            height: 100px;
+        }
+    }
+    @media screen and (min-width: 992px){
+        .links{
+            background-color:lightgrey;
+            height: auto;
+            }
+
+        .rechts{
+            background-color:lightgrey;
+            height: auto;
+        }
     }
 
 
@@ -29,11 +80,11 @@
 
 <body>
 
-<h1><p class="ueberschrift">Teilnehmer_innen WebTech </p>
-
-    <p class="logo"><img src="./images/FIW.jpg" alt="FIW-Logo" style="width: 53px; height=48px" title="FIW-Logo"/></p>
-
-</h1>
+<header class="jumbotron">
+    <h1><p class="ueberschrift">Teilnehmer_innen WebTech </p>
+        <p class="logo"><img src="./images/FIW.jpg" alt="FIW-Logo" style="width: 53px; height=48px" title="FIW-Logo"/></p>
+    </h1>
+</header>
 
 <nav>
     <ul class="nav">
@@ -56,15 +107,22 @@
     </ul>
 
 </nav>
-<h2>Alle Teilnehmer_innen </h2>
+
+<main class="row">
+
+<div class="links medium large">
+    <h3>links</h3>
+</div>
+
+    <div class="tabelle table-striped table-hover medium large">
 
 <table>
     <thead>
     <tr id="A-Z">
-        <th>Vorname</th>
-        <th>Nachname</th>
-        <th>E-Mail-Adresse</th>
-        <th>IP-Adresse</th>
+        <th scope="col">Vorname</th>
+        <th scope="col">Nachname</th>
+        <th scope="col">E-Mail-Adresse</th>
+        <th scope="col">IP-Adresse</th>
     </tr>
     </thead>
     <tbody>
@@ -370,6 +428,13 @@
     </tr>
     </tbody>
 </table>
+</div>
+
+    <div class="rechts medium large">
+<h3>rechts</h3>
+</div>
+
+</main>
 
 <footer>
     <h2>Sabeth Bartsch 561166</h2>

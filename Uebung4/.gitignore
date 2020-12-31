@@ -1,0 +1,12 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.rspec
+/spec/tmp/*
+*.pyc
+*~
+/.vscode
+/static
+.DS_Store
+--pyache--

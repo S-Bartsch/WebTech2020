@@ -59,7 +59,7 @@ constructor(private ds: DataService) {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: Data[]): Data {
+  private getSortedData(data: Data[]): Data[] {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }

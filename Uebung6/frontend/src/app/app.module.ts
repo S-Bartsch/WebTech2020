@@ -16,12 +16,14 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { SingleComponent } from './single/single.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    TableComponent
+    TableComponent,
+    SingleComponent
   ],
   imports: [
     BrowserModule,

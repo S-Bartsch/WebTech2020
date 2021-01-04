@@ -6,6 +6,7 @@ import {SingleComponent} from './single/single.component';
 const routes: Routes = [
   { path: 'table', component: TableComponent },
   { path: 'table/:id', component: SingleComponent },
+  { path: 'single', component: SingleComponent },
 ];
 
 @NgModule({
